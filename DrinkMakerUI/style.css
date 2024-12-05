@@ -1,0 +1,129 @@
+/* This is web site designed for use with a phone. All css will be designed to be used on a phone and not a desktop computer. */
+.container{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    background-color: #36454F;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 10;
+}
+
+.topbar{
+    
+    background-color: #2F1E27;
+    grid-row-start: 0;
+    grid-row-end: 1;
+    grid-column-start: 1;
+    grid-column-end: 1;
+    display: flex;
+    justify-content: center;
+    
+
+}
+
+#Title{
+   color: #edc6de;
+   font-family:"Noto Sans", sans-serif;
+}
+
+/* define the grid for all children withen the div */
+.main{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    background-color: #2F1E27;
+    left: 0;
+    top: 0;
+   
+}
+
+.namediv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    
+
+}
+
+.shotcountdiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    grid-row-start: 2;
+    grid-row-end: 3;
+
+}
+
+.inputbox{
+  border:none;
+  outline:none;
+  display:inline-block;
+  height:34px;
+  vertical-align:middle;
+  position:relative;
+  border-radius:22px;
+  width:220px;
+  box-sizing:border-box;
+  padding:0 18px; 
+}
+
+
+.mixerdiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    grid-row-start: 3;
+    grid-row-end: 4;
+
+}
+
+h2{
+   color: #edc6de;
+   font-family:"Noto Sans", sans-serif;
+}
+
+label{
+   color: #edc6de;
+   font-family:"Noto Sans", sans-serif;
+}
+
+
+.btndiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    grid-row-start: 4;
+    grid-row-end: 5;
+}
+
+#subDrink{
+  border:none;
+  outline:none;
+  background:rgba(197,62,126,.33);
+  color:#fff;
+  position:relative;
+  left:9px;
+  top:25px; 
+  width:150px;
+  height: 30px;
+  cursor:pointer;
+  border-radius: 33px;
+
+}
+
+p{
+    color: red;
+}
