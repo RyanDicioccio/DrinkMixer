@@ -7,6 +7,7 @@ let mixedPass;
 //Access For The Input and P Tags In The HTML
 let inputName = document.getElementById("name")
 let nameVText = document.getElementById("nameError")
+let userNameDisplay = document.getElementById("userName");
 
 //call function on keyup
 inputName.addEventListener("keyup",validateName)
@@ -15,6 +16,8 @@ function validateName(){ //start function vaildateName
 
 //get the value from the input
 let name = this.value
+
+
 // regex for user name
 var nameRegex = /^[a-zA-Z\-]{2,20}$/;
 
@@ -22,6 +25,8 @@ var nameRegex = /^[a-zA-Z\-]{2,20}$/;
 if(nameRegex.test(name)){
     nameVText.textContent = ""
     namePass = true;
+    // Store the validated name in localStorage
+    localStorage.setItem("userName", name);
 } else {
     nameVText.textContent = " Please Enter Your Name"
     namePass = false;
@@ -117,7 +122,7 @@ if (submitButton) {
 function submitDrink(event){ //start function submitDrink
 
     if(namePass === true && shotPass === true && mixedPass === true) {
-        alert("Test")
+        window.location.href="./Success.html"
 
     } else{
         alert("Please Fill In All Fields Correctly")
@@ -125,3 +130,6 @@ function submitDrink(event){ //start function submitDrink
     }
 
 } //end  function submitDrink
+
+
+

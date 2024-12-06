@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thank You!</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="sContainer">
+      <div class="ThankYou">
+        <div class="formatThankYou">
+          <h2 id="ThankYouMSG"> Thank You <span id="userName"></span><span id="white">!</span>
+          </h2>
+        </div>
+        <h4>Please Wait For Your Drink To Be Ready!</h4>
+      </div>
+
+      <script>
+        // Retrieve the user's name from localStorage
+        const userName = localStorage.getItem("userName");
+        const userNameDisplay = document.getElementById("userName");
+
+        // Update the userName span with the retrieved name or a default
+        if (userName) {
+          userNameDisplay.textContent = userName;
+        }
+      </script>
+    </div>
+  </body>
+</html>
