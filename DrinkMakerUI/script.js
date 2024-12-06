@@ -1,7 +1,7 @@
 //define vars for when user wants to submit the drink all the data has proper information.
-let namePass = false;
-let shotPass = false;
-let mixedPass = false;
+let namePass;
+let shotPass;
+let mixedPass;
 
 //Validation For Name
 //Access For The Input and P Tags In The HTML
@@ -51,12 +51,12 @@ function validateShotNum(){ //start function validateShotNum.
         alert("This Will Only Dispense The Mixer");
         radioButtons.forEach(radio => radio.disabled = true);
         numberVText.textContent = "";
-        shotpass = true;
+        shotPass = true;
         mixedPass= true;
     } else if (number < 0 || number > 2) {
         numberVText.textContent = "Please Enter A Shot Amount Between 0-2";
         radioButtons.forEach(radio => radio.disabled = false);
-        shotpass = false;
+        shotPass = false;
         mixedPass = false;
     } else {
         numberVText.textContent = "";
@@ -116,14 +116,12 @@ if (submitButton) {
 
 function submitDrink(event){ //start function submitDrink
 
-    if(namePass === true && shotPass === true &&  mixedPass === true) {
+    if(namePass === true && shotPass === true && mixedPass === true) {
         alert("Test")
 
     } else{
         alert("Please Fill In All Fields Correctly")
         event.preventDefault();
     }
-
-
 
 } //end  function submitDrink
