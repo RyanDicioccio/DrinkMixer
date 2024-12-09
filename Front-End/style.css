@@ -1,9 +1,11 @@
 /* This is web site designed for use with a phone. All css will be designed to be used on a phone and not a desktop computer. */
-.container{
+
+
+form{
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
-    background-color: #36454F;
+    background-color: #2F1E27;
     position: fixed;
     width: 100%;
     height: 100%;
@@ -22,25 +24,11 @@
     display: flex;
     justify-content: center;
     
-
 }
 
 body{
     background-color: #2F1E27
 
-}
-
-.sContainer{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-    background-color: #2F1E27;
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
-    z-index: 10;
 }
 
 .ThankYou{

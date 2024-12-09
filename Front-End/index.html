@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Make A Drink!</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
@@ -12,41 +12,38 @@
   <body>
     <!-- div to hold every child element of the document. -->
     <div class="container">
+      <form id="form">
       <!-- div to hold every thing to be displayed at the top of the page.            -->
       <div class="topbar">
         <h1 id="Title">Lets Make A Drink!</h1>
       </div>
-
       <!-- div to hold all the main info on the page -->
-      <div class="main">
-        <div class="namediv">
-          <h2>What Is Your Name?</h2>
-          <input type="text" class="inputbox" placeholder="Name" id="name" />
-          <p id="nameError"></p>
-        </div>
-        <div class="shotcountdiv">
-          <h2>How Many Shots Do You Want?</h2>
-          <input type="number" class="inputbox" placeholder="Number Of Shots" id="shotNum" />
-          <p id="numberError"></p>
-        </div>
-        <div class="mixerdiv">
-          <h2>Do You Want It Straight Or With A Mixer?</h2>
-          <div class="radiobtn">
-            <form id="form">
-            <label for="">Staight</label>
-            <input type="radio" name="Mixer" value="1" />
-            <label for="">With Mixer</label>
-            <input type="radio" name="Mixer" value="2" />
-            </form>
+        <div class="main">
+          <div class="namediv">
+            <h2>What Is Your Name?</h2>
+            <input type="text" class="inputbox" placeholder="Name" id="name" name="name" required />
+            <p id="nameError"></p>
           </div>
-          <p id="radioError"></p>
+          <div class="shotcountdiv">
+            <h2>How Many Shots Do You Want?</h2>
+            <input type="number" class="inputbox" placeholder="Number Of Shots" id="shotNum" name="shotNum" required />
+            <p id="numberError"></p>
+          </div>
+          <div class="mixerdiv">
+            <h2>Do You Want It Straight Or With A Mixer?</h2>
+            <div class="radiobtn">
+              <label for="straight">Straight</label>
+              <input type="radio" id="straight" name="mixer" value="straight" required />
+              <label for="withMixer">With Mixer</label>
+              <input type="radio" id="withMixer" name="mixer" value="with_mixer" required />
+            </div>
+            <p id="radioError"></p>
+          </div>
+          <div class="btndiv">
+            <button type="submit" id="subDrink">Submit Drink</button>
+          </div>
         </div>
-        <div class="btndiv">
-          <button id="subDrink">Submit Drink</button>
-        </div>
-      </div>
-    </div>
-
+      </form>
     <script src="script.js"></script>
   </body>
 </html>
