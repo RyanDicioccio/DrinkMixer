@@ -22,3 +22,5 @@ def pour_drink():
 if __name__ == '__main__':
     # Run the server on http://localhost:5000
     app.run(debug=True)
+
+#TODO Add MongoDB Support To Have A Log Of Each Record Of Each Drink Being Made (Idea Have a colum to see how much liqud was used in a day or etc)
